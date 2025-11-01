@@ -135,8 +135,8 @@ if uploaded_file is not None:
             else:
                 return 'ND'
 
-        df_final['Estado_PM25'] = df_final.apply(lambda x: estado_final(x[['Bandera_RF', 'Bandera_CT_PM25', 'Bandera_CI_PM25']]), axis=1)
-        df_final['Estado_PM10'] = df_final.apply(lambda x: estado_final(x[['Bandera_RF', 'Bandera_CT_PM10', 'Bandera_CI_PM10']]), axis=1)
+        df_final['Bandera_N1_PM25'] = df_final.apply(lambda x: estado_final(x[['Bandera_RF', 'Bandera_CT_PM25', 'Bandera_CI_PM25']]), axis=1)
+        df_final['Bandera_N1_PM10'] = df_final.apply(lambda x: estado_final(x[['Bandera_RF', 'Bandera_CT_PM10', 'Bandera_CI_PM10']]), axis=1)
 
         
 
@@ -159,3 +159,4 @@ if uploaded_file is not None:
             mime="text/csv")
 
         st.success("✅ Procesamiento completado correctamente.")
+
